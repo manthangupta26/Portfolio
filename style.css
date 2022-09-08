@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Montserrat:wght@200;300;900&family=Poppins:wght@400;500;700;900&family=Square+Peg&display=swap');
+
+
+.name{
+    font-family:Dancing Script, sans-serif;
+    letter-spacing: 8px;
+    font-weight: 500;
+    font-size: 20px;
+}

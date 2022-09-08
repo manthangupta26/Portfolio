@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens :{
+          sm: '640px',
+          md: '768px',
+          lg:'1024px',
+          xl:'1280px',
+        },
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            brown:"#f3ede8",
+            dbrown:"#8f7b6a"
+          }
+        }
+      }
+    }
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   <style>
+    .carousel-open:checked + .carousel-item {
+      position: static;
+      opacity: 100;
+    }
+    .carousel-item {
+      -webkit-transition: opacity 0.6s ease-out;
+      transition: opacity 0.6s ease-out;
+    }
+    #carousel-1:checked ~ .control-1,
+    #carousel-2:checked ~ .control-2,
+    #carousel-3:checked ~ .control-3 {
+      display: block;
+    }
+    .carousel-indicators {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+    #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+    #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+    #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+      color: #6a4646; 
+    }
+  </style>
+</head>
+<body class="bg-white"  style="background-image: url(./images/pexels-karolina-grabowska-8947690.jpg); background-position: center;background-repeat: no-repeat;background-size: cover; height: 100vh;">
+  <nav class="p-11 bg-brown shadow md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center">
+      <span class="text-2xl font-thin tracking-widest font-[Poppins] cursor-pointer  hover:text-dbrown duration-500 font-extralight">
+       MANTHAN GUPTA
+      </span>
+ 
+      <span class="text-3xl cursor-pointer md:hidden block">
+        <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
+    <ul class="md:flex md:items-center z -[ -1 ] md:z-auto md:static absolute bg-brown w-full left-0 md:w-auto md:py-0 py-4 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      <li class="mx-10 my-6 md:my-0">
+          <a href="#" class="text-xl text-dbrown hover:text-yellow-700 duration-500 font-extralight">Explore</a>
+      </li>
+      <li class="mx-10 my-6 md:my-0">
+        <a href="#" class="text-xl text-dbrown hover:text-yellow-700 duration-500 font-extralight">About</a>
+      </li>
+    </ul> 
+</nav>
+
+
+<section>
+   <div class="m-20 ">
+       <div class="text-3xl font-[Poppins] hover:text-white duration-500 tracking-widest flex justify-center">
+         ABOUT ME
+       </div>
+       <div class="text-xl text-center mt-10 text-black hover:text-white duration-500">
+                My aspiration to live creativity and meet people’s actual needs when it comes to media consumption led me to complete my Bachelor’s in Information Technology. My aim is always to combine a pragmatic approach with aesthetics, while improving communication between people.
+       </div>
+   </div>
+
+   <div class="mx-20">
+    <div class="carousel relative shadow-2xl bg-brown">
+      <div class="carousel-inner relative overflow-hidden">
+        <!--Slide 1-->
+        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+        <div class="carousel-item absolute opacity-0" style="height:30vh;">
+          <div class="block h-20vh w-full text-dbrown text-5xl text-center text font-[Poppins] mt-3">Project 1</div>
+           <div class=" text-center mt-3 mx-20 md:mx-auto md:mt-8">This is a Landing Page made by me solely based on HTML, CSS and Bootstrap</div>
+           <div class="text-center mt-3 md:mt-8">
+            <form action="https://clinquant-marshmallow-418c04.netlify.app/">
+                <button class="bg-transparent hover:bg-dbrown text-dbrown font-semibold hover:text-white py-2 px-4 border   border-dbrown hover:border-transparent rounded">
+                  Check It Out
+              </button>
+            </form>
+        </div>
+        </div>
+        <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-dbrown leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-dbrown leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+        
+        <!--Slide 2-->
+        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item absolute opacity-0" style="height:30vh;">
+          <div class="block h-20vh w-full text-dbrown text-5xl text-center text font-[Poppins] mt-3">Project 2</div>
+          <div class=" text-center mt-3 mx-20 md:mx-auto md:mt-8">This is PAYTM Clone, made solely on Tailwind, made it mobile responsive, as the actual website isn't.</div>
+          <div class="text-center mt-3 md:mt-8">
+           <form action="https://lambent-sunburst-1676a0.netlify.app/">
+               <button class="bg-transparent hover:bg-dbrown text-dbrown font-semibold hover:text-white py-2 px-4 border   border-dbrown hover:border-transparent rounded">
+                 Check It Out
+             </button>
+           </form>
+       </div>
+       </div>
+        <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-dbrown leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-dbrown leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
+        
+        <!--Slide 3-->
+        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item absolute opacity-0" style="height:30vh;">
+          <div class="block h-20vh w-full text-dbrown text-5xl text-center text font-[Poppins] mt-3">Project 3</div>
+          <div class=" text-center mt-3 mx-20 md:mx-auto md:mt-8">This is Shoppify Clone, made solely on Tailwind, also mobile responsive.</div>
+          <div class="text-center mt-3 md:mt-8">
+           <form action="https://singular-seahorse-288254.netlify.app/">
+               <button class="bg-transparent hover:bg-dbrown text-dbrown font-semibold hover:text-white py-2 px-4 border   border-dbrown hover:border-transparent rounded">
+                 Check It Out
+             </button>
+           </form>
+       </div>
+       </div>
+        <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-dbrown leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-dbrown leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+    
+        <!-- Add additional indicators for each slide-->
+        <ol class="carousel-indicators">
+          <li class="inline-block mr-3">
+            <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-black hover:text-dbrown">•</label>
+          </li>
+          <li class="inline-block mr-3">
+            <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-black hover:text-dbrown">•</label>
+          </li>
+          <li class="inline-block mr-3">
+            <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-black hover:text-dbrown">•</label>
+          </li>
+        </ol>
+        
+      </div>
+    </div>
+   </div>
+</section>
+
+
+
+<footer class="text-center text-white p-10" style="background-color: transparent">
+  <div class="text-center text-gray-700 p-4 flex justify-between" style="background-color: transparent">
+    <div  class="text-xl hover:text-dbrown duration-500 cursor-pointer">Explore More Here </div>
+    <div class="flex space-x-5">
+      <a href="https://github.com/manthangupta26" class="text-gray-800 hover:text-dbrown duration-500">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fab"
+          data-icon="github"
+          class="svg-inline--fa fa-github w-4"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 496 512"
+        >
+          <path
+            fill="currentColor"
+            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+  function Menu(e){
+    let list = document.querySelector('ul');
+    e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+  }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
