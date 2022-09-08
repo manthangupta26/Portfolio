@@ -15,7 +15,7 @@ Took around 4-5 hours to make it.
 ___
 Click here to go the home page which is deployed via Netlify.
 
-[Click me](https://moonlit-semolina-299799.netlify.app)
+[Click me](https://dancing-yeot-106e17.netlify.app)
 
 ### Screenshots
 ___
