@@ -1,6 +1,6 @@
 > *Life is a ongoing learning process.*
 
-## Rode Clone
+## Portfolio
 ___
 This is my portfolio website
 - This is based on Tailwind CSS.
